@@ -1,7 +1,7 @@
 ---
-name: "OpenEMS UI Edge"
+name: "Test"
 version: "2025.6.0"
-slug: "openems_ui_edge"
+slug: "openems_ui"
 description: "OpenEMS Web UI für Edge Server"
 arch:
   - amd64
