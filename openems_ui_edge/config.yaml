@@ -10,7 +10,7 @@ arch:
   - i386
 startup: application
 boot: auto
-ports: 8080:80
+ports: 8080/tcp: 80
 environment:
   UI_WEBSOCKET: ws://openems_edge:8085
 image: openems/edge:latest
