@@ -1,0 +1,12 @@
+name: OpenEMS Edge
+version: "1.0.0"
+slug: openems_edge
+description: "OpenEMS Edge Server"
+arch:
+  - amd64
+  - aarch64
+startup: services
+boot: auto
+ports:
+  8085/tcp: 8085
+image: "openems/edge:latest"
