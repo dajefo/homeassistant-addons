@@ -14,4 +14,3 @@ ports:
   8080/tcp: 80
 environment:
   UI_WEBSOCKET: ws://openems_edge:8085
-image: docker.io/openems/ui-edge:latest
