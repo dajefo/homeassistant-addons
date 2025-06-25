@@ -1,5 +1,0 @@
-build_from:
-  amd64: "openems/ui-edge:latest"
-  aarch64: "openems/ui-edge:latest"
-  armv7: "openems/ui-edge:latest"
-  i386: "openems/ui-edge:latest"
