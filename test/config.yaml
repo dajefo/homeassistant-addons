@@ -10,3 +10,4 @@ arch:
   - i386
 startup: application
 boot: auto
+image: openems/edge:latest
