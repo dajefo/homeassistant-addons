@@ -1,16 +1,16 @@
-name: OpenEMS Edge Server
-version: "2025.6.0"
+name: OpenEMS Edge
+version: "1.0.0"
 slug: openems_edge
-description: "OpenEMS Edge Server – Energie‑Management"
+description: OpenEMS Energie-Management-Plattform
 arch:
   - amd64
   - aarch64
 startup: application
 boot: auto
 ports:
+  8080/tcp: 8080
   8085/tcp: 8085
+image: "openems/edge:latest"
 volumes:
-  - openems_edge_config:/etc/openems.d
-  - openems_edge_data:/var/lib/openems
-environment: {}
-image: "openems/edge:2025.6.0"
+  - config:/var/opt/openems/config
+  - data:/var/opt/openems/data
