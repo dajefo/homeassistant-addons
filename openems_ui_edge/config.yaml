@@ -1,0 +1,12 @@
+name: OpenEMS UI Edge
+version: "1.0.0"
+slug: openems_ui_edge
+description: "OpenEMS Web UI für Edge"
+arch:
+  - amd64
+  - aarch64
+startup: application
+boot: auto
+ports:
+  8080/tcp: 80
+image: "openems/ui-edge:latest"
