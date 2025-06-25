@@ -1,11 +1,10 @@
-name: "Hello world"
-description: "My first real add-on!"
-version: "1.0.0"
-slug: "hello_world"
-init: false
+---
+name: "OpenEMS UI Edge"
+version: "2025.6.0"
+slug: "openems_ui_edge"
+description: "OpenEMS Web UI für Edge Server"
 arch:
-  - aarch64
   - amd64
-  - armhf
+  - aarch64
   - armv7
   - i386
