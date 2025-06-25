@@ -1,7 +1,8 @@
+---
 name: OpenEMS UI Edge
-version: "2025.6.0"
+version: 2025.6.0
 slug: openems_ui_edge
-description: "OpenEMS Web UI für Edge Server"
+description: OpenEMS Web UI für Edge Server
 arch:
   - amd64
   - aarch64
@@ -9,9 +10,7 @@ arch:
   - i386
 startup: application
 boot: auto
-ports:
-  8080:80
+ports: 8080:80
 environment:
-  # WebSocket-Verbindung zum Edge-Container
-  UI_WEBSOCKET: "ws://openems_edge:8085"
-image: "openems/edge:latest"
+  UI_WEBSOCKET: ws://openems_edge:8085
+image: openems/edge:latest
