@@ -14,4 +14,4 @@ ports:
 environment:
   # WebSocket-Verbindung zum Edge-Container
   UI_WEBSOCKET: "ws://openems_edge:8085"
-image: "openems/ui-edge:2025.6.0"
+image: "openems/edge:latest"
