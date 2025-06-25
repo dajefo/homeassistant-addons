@@ -11,8 +11,8 @@ arch:
 startup: application
 boot: auto
 ports:
-  8080/tcp: 8080
-  8085/tcp: 8085
+  8080:8080
+  8080:8085
 image: "openems/edge:latest"
 volumes:
   - config:/var/opt/openems/config
