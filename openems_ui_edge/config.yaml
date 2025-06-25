@@ -15,4 +15,4 @@ ports:
   8080/tcp: 80
 environment:
   UI_WEBSOCKET: ws://openems_edge:8085
-image: openems/ui-edge:latest
+image: "openems/ui-edge:latest"
