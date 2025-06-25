@@ -1,2 +1,2 @@
-# homeassistant-openems-addons-
+# homeassistant-openems-addons
 Coming soon.
