@@ -1,3 +1,0 @@
-#!/usr/bin/with-contenv bashio
-mkdir -p /var/run/tailscale2
-exec tailscaled --state=/data/tailscaled2.state --socket=/var/run/tailscale2/tailscaled.sock
