@@ -1,8 +1,0 @@
-#!/usr/bin/with-contenv bashio
-# Erstelle Socket-Verzeichnis
-mkdir -p /var/run/tailscale2
-
-# Starte Tailscale mit eigenem State und Socket
-exec tailscaled \
-  --state=/data/tailscaled2.state \
-  --socket=/var/run/tailscale2/tailscaled.sock
