@@ -1,48 +1,22 @@
----
 name: Tailscale2
-version: dev
 slug: tailscale2
-description: Zero config VPN for building secure networks
-url: https://github.com/dajefo/homeassistant-addons/tree/main/addon-tailscale
-codenotary: codenotary@frenck.dev
-ingress: true
-ingress_port: 0
-ingress_stream: true
-startup: services
-panel_icon: mdi:vpn
+description: "Zero config VPN (zweite Instanz, getrennt vom Original)"
+version: "dev"
 arch:
-  - aarch64
   - amd64
+  - aarch64
   - armv7
-init: false
-hassio_api: true
-host_network: true
-host_dbus: true
-privileged:
-  - NET_ADMIN
-  - NET_RAW
-devices:
-  - /dev/net/tun
+startup: services
+boot: auto
+ports:
+  8090/tcp: 8090
+ports_description:
+  8090/tcp: "Tailscale2 Web UI"
 map:
   - share:rw
+  - ssl
   - config:rw
-ports:
-  41641/udp: null
+options:
+  log_level: info
 schema:
-  accept_dns: bool?
-  accept_routes: bool?
-  advertise_exit_node: bool?
-  advertise_connector: bool?
-  advertise_routes:
-    - "match(^(((25[0-5]|(2[0-4]|1\\d|[1-9]?)\\d)\\.){3}(25[0-5]|(2[0-4]|1\\d|[1-9]?)\\d)\\/(3[0-2]|[12]?\\d)|[a-fA-F\\d.:]+:[a-fA-F\\d.:]+\\/(12[0-8]|(1[01]|[1-9]?)\\d))$)?"
-  funnel: bool?
-  log_level: list(trace|debug|info|notice|warning|error|fatal)?
-  login_server: url?
-  proxy: bool?
-  proxy_and_funnel_port: match(^(443|8443|10000)$)?
-  snat_subnet_routes: bool?
-  stateful_filtering: bool?
-  tags:
-    - "match(^tag:[a-zA-Z][a-zA-Z0-9-]*$)?"
-  taildrop: bool?
-  userspace_networking: bool?
+  log_level: list(debug|info|warning|error)
