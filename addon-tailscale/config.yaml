@@ -1,9 +1,9 @@
 ---
-name: Tailscale
+name: Tailscale2
 version: dev
 slug: tailscale2
 description: Zero config VPN for building secure networks
-url: https://github.com/dajefo/homeassistant-addons/addon-tailscale
+url: https://github.com/dajefo/homeassistant-addons/tree/main/addon-tailscale
 codenotary: codenotary@frenck.dev
 ingress: true
 ingress_port: 0
