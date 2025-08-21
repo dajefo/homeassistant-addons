@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:18.1.0
+ARG BUILD_FROM
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -35,10 +35,9 @@ RUN \
 # Copy root filesystem
 COPY rootfs /
 
-#correct permissions?
-RUN chmod +x /etc/s6-overlay/scripts/stage2_hook.sh
-    chmod +x /etc/s6-overlay/s6-rc.d/*/run && \
-    chmod +x /etc/s6-overlay/scripts/*.sh
+# S6 overlay execute permissions fix
+RUN chmod +x /etc/s6-overlay/scripts/*.sh && \
+    find /etc/s6-overlay/s6-rc.d/ -type f -name 'run' -exec chmod +x {} \;
 
 
 # S6 Overlay stage 2 hook
