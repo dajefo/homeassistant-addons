@@ -36,8 +36,6 @@ RUN \
 COPY rootfs /
 
 #correct permissions?
-RUN 
-
 RUN chmod +x /etc/s6-overlay/scripts/stage2_hook.sh
     chmod +x /etc/s6-overlay/s6-rc.d/*/run && \
     chmod +x /etc/s6-overlay/scripts/*.sh
