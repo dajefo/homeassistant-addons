@@ -1,6 +1,6 @@
 name: Tailscale2
 slug: tailscale2
-description: "Zero config VPN (zweite Instanz, minimal, nur tailscaled)"
+description: "Zero config VPN (zweite Instanz, HA-kompatibel)"
 version: "dev"
 arch:
   - amd64
