@@ -1,6 +1,6 @@
 name: Tailscale2
 slug: tailscale2
-description: "Zero config VPN (zweite Instanz, getrennt vom Original)"
+description: "Zero config VPN (zweite Instanz, getrennt vom Original, minimal)"
 version: "dev"
 arch:
   - amd64
@@ -8,13 +8,8 @@ arch:
   - armv7
 startup: services
 boot: auto
-ports:
-  8090/tcp: 8090
-ports_description:
-  8090/tcp: "Tailscale2 Web UI"
 map:
   - share:rw
-  - ssl
   - config:rw
 options:
   log_level: info
