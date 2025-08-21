@@ -35,6 +35,9 @@ RUN \
 # Copy root filesystem
 COPY rootfs /
 
+#correct permissions?
+RUN chmod +x /etc/s6-overlay/scripts/stage2_hook.sh
+
 # S6 Overlay stage 2 hook
 ENV S6_STAGE2_HOOK=/etc/s6-overlay/scripts/stage2_hook.sh
 
